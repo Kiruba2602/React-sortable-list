@@ -13,7 +13,7 @@ const SortableList = ({items, setItems}) => {
     };
 
   return (
-    <ul>
+    <ul className='sortable-list'>
         {items.map((item, index) => (
             <SortableListItem key={item} index={index} item={item} moveItem={moveItem} />
         ))}
