@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import SortableList from './SortableList';
 
 function App() {
+  const [items, setItems] = useState(['Item1','Item2','Item3','Item4','Item5']);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>SortableList</h1>
+      <SortableList items={items} setItems={setItems} />
     </div>
   );
 }
